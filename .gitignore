@@ -2,11 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
 .Python
-build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -20,6 +17,22 @@ wheels/
 .installed.cfg
 *.egg
 
+# Cython generated C files (from .pyx)
+src/cython_wrapper.c
+
+# Cython compiled extension modules
+cython_wrapper*.so
+*.cpython-*.so
+
+# Build directories
+build/
+dist/
+
+# C compiled objects (intermediate files)
+*.o
+
+# C library (should be rebuilt)
+src/libbenchmark.so
 
 # Test results
 .pytest_cache/
@@ -41,4 +54,3 @@ benchmark_report.md
 # OS
 .DS_Store
 Thumbs.db
-

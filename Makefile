@@ -36,19 +36,19 @@ $(SRC_DIR)/libbenchmark.so: $(SHARED_LIB)
 
 # Build Cython extension
 cython:
-	python setup.py build_ext --inplace
+	python3 setup.py build_ext --inplace
 
 # Run correctness tests
 test: all
-	python -m pytest tests/ -v
+	python3 -m pytest tests/ -v
 
 # Run benchmarks
 benchmark: all
-	cd benchmarks && python benchmark_runner.py
+	cd benchmarks && python3 benchmark_runner.py
 
 # Run analysis
 analyze:
-	cd benchmarks && python analyze_results.py
+	cd benchmarks && python3 analyze_results.py
 
 # Clean build artifacts
 clean:

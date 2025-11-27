@@ -8,14 +8,14 @@ echo "Building Cython vs ctypes Performance Benchmarks"
 echo "=================================================="
 
 # Check if Python is available
-if ! command -v python &> /dev/null; then
+if ! command -v python3 &> /dev/null; then
     echo "Error: Python not found"
     exit 1
 fi
 
 echo ""
 echo "Step 1: Installing Python dependencies..."
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 echo ""
 echo "Step 2: Building C shared library for ctypes..."
